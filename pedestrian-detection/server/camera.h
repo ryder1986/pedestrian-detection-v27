@@ -146,6 +146,7 @@ signals:
    };
 
 class CameraManager{
+    friend class ClientSession;
     int test_int;
     mutex cfg_lock;
 public:
@@ -255,7 +256,8 @@ public:
     }
     CameraConfiguration *p_cfg;
 private:
-public:
+
+private:
     QList<Camera *> cameras;
 
 };
